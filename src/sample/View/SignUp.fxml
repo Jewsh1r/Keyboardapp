@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.SignUpController">
+    <children>
+      <TextField fx:id="Signup_surname" alignment="CENTER" layoutX="310.0" layoutY="102.0" prefHeight="26.0" prefWidth="213.0" promptText="Фамилия" />
+        <TextField fx:id="Signup_Login" alignment="CENTER" layoutX="65.0" layoutY="154.0" prefHeight="26.0" prefWidth="213.0" promptText="Логин" />
+        <PasswordField fx:id="Signup_Password" alignment="CENTER" layoutX="65.0" layoutY="204.0" prefHeight="26.0" prefWidth="213.0" promptText="Пароль" />
+        <Button fx:id="Signup_button" layoutX="65.0" layoutY="254.0" mnemonicParsing="false" onAction="#RegisterButtonAction" prefHeight="33.0" prefWidth="457.0" text="Регистрация" />
+        <Label layoutX="268.0" layoutY="54.0" text="Sign up" />
+        <Button fx:id="Singup_button" layoutX="65.0" layoutY="295.0" mnemonicParsing="false" onAction="#ChangeScreenButtonPushedSignIn" prefHeight="33.0" prefWidth="457.0" text="Назад" />
+      <PasswordField fx:id="Signup_PasswordRepeat" alignment="CENTER" layoutX="310.0" layoutY="204.0" prefHeight="26.0" prefWidth="213.0" promptText="Пароль" />
+      <TextField fx:id="Signup_name" alignment="CENTER" layoutX="65.0" layoutY="102.0" prefHeight="26.0" prefWidth="213.0" promptText="Имя" />
+      <TextField fx:id="Signup_Email" alignment="CENTER" layoutX="310.0" layoutY="154.0" prefHeight="26.0" prefWidth="213.0" promptText="Почта" />
+      <Label fx:id="lblStatus" layoutX="103.0" layoutY="328.0" prefHeight="21.0" prefWidth="375.0" textAlignment="CENTER" />
+    </children>
+</AnchorPane>

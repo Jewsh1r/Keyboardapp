@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.KeyboardController">
+   <children>
+      <AnchorPane layoutX="520.0" layoutY="213.0" prefHeight="308.0" prefWidth="357.0">
+         <children>
+            <TabPane fx:id="KeyTabPane" prefHeight="308.0" prefWidth="359.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Стандартный">
+                  <content>
+                    <AnchorPane fx:id="KeyAnchorDefault" minHeight="0.0" minWidth="0.0" prefHeight="281.0" prefWidth="440.0">
+                           <children>
+                              <ToggleButton layoutY="-2.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="Q" />
+                              <ToggleButton layoutX="71.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="W" />
+                              <ToggleButton layoutX="143.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="E" />
+                              <ToggleButton layoutX="215.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="R" />
+                              <ToggleButton layoutX="287.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="T" />
+                              <ToggleButton layoutY="69.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="Y" />
+                              <ToggleButton layoutX="71.0" layoutY="69.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="U" />
+                              <ToggleButton layoutX="143.0" layoutY="69.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="I" />
+                              <ToggleButton layoutX="215.0" layoutY="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="P" />
+                              <ToggleButton layoutX="287.0" layoutY="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="A" />
+                              <ToggleButton layoutY="140.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="S" />
+                              <ToggleButton layoutX="71.0" layoutY="140.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="D" />
+                              <ToggleButton layoutX="143.0" layoutY="140.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="F" />
+                              <ToggleButton layoutX="215.0" layoutY="141.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="G" />
+                              <ToggleButton layoutX="287.0" layoutY="141.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="H" />
+                              <ToggleButton layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="J" />
+                              <ToggleButton layoutX="71.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="K" />
+                              <ToggleButton layoutX="143.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="L" />
+                              <ToggleButton layoutX="215.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="Z" />
+                              <ToggleButton layoutX="287.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="X" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="TabL1" text="Уровень 1">
+                     <content>
+                        <AnchorPane fx:id="KeyAnchorDefault1" minHeight="0.0" minWidth="0.0" prefHeight="281.0" prefWidth="440.0">
+                           <children>
+                              <ToggleButton layoutY="-2.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="Q" />
+                              <ToggleButton layoutX="71.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="W" />
+                              <ToggleButton layoutX="143.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="E" />
+                              <ToggleButton layoutX="215.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="R" />
+                              <ToggleButton layoutX="287.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="T" />
+                              <ToggleButton layoutY="69.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="Y" />
+                              <ToggleButton layoutX="71.0" layoutY="69.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="U" />
+                              <ToggleButton layoutX="143.0" layoutY="69.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="I" />
+                              <ToggleButton layoutX="215.0" layoutY="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="P" />
+                              <ToggleButton layoutX="287.0" layoutY="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="A" />
+                              <ToggleButton layoutY="140.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="S" />
+                              <ToggleButton layoutX="71.0" layoutY="140.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="D" />
+                              <ToggleButton layoutX="143.0" layoutY="140.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="F" />
+                              <ToggleButton layoutX="215.0" layoutY="141.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="G" />
+                              <ToggleButton layoutX="287.0" layoutY="141.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="H" />
+                              <ToggleButton layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="M" />
+                              <ToggleButton layoutX="71.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="K" />
+                              <ToggleButton layoutX="143.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="L" />
+                              <ToggleButton layoutX="215.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="Z" />
+                              <ToggleButton layoutX="287.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="X" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="TabL2" text="Уровень 2">
+                     <content>
+                        <AnchorPane fx:id="KeyAnchorDefault11" minHeight="0.0" minWidth="0.0" prefHeight="281.0" prefWidth="440.0">
+                           <children>
+                              <ToggleButton layoutY="-2.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="Q" />
+                              <ToggleButton layoutX="71.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="W" />
+                              <ToggleButton layoutX="143.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="E" />
+                              <ToggleButton layoutX="215.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="R" />
+                              <ToggleButton layoutX="287.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="T" />
+                              <ToggleButton layoutY="69.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="Y" />
+                              <ToggleButton layoutX="71.0" layoutY="69.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="U" />
+                              <ToggleButton layoutX="143.0" layoutY="69.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="I" />
+                              <ToggleButton layoutX="215.0" layoutY="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="P" />
+                              <ToggleButton layoutX="287.0" layoutY="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="A" />
+                              <ToggleButton layoutY="140.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="S" />
+                              <ToggleButton layoutX="71.0" layoutY="140.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="D" />
+                              <ToggleButton layoutX="143.0" layoutY="140.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="F" />
+                              <ToggleButton layoutX="215.0" layoutY="141.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="G" />
+                              <ToggleButton layoutX="287.0" layoutY="141.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="H" />
+                              <ToggleButton layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="N" />
+                              <ToggleButton layoutX="71.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="K" />
+                              <ToggleButton layoutX="143.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="L" />
+                              <ToggleButton layoutX="215.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="Z" />
+                              <ToggleButton layoutX="287.0" layoutY="210.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="X" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="93.0" prefWidth="320.0">
+         <children>
+            <Label layoutX="6.0" layoutY="28.0" prefHeight="26.0" prefWidth="226.0" text="Профиль:" textFill="WHITE" />
+            <Label layoutX="7.0" layoutY="54.0" prefHeight="35.0" prefWidth="150.0" text="Стандартный" textFill="WHITE" />
+            <Label layoutX="4.0" prefHeight="35.0" prefWidth="150.0" text="Клавиатура:" textFill="#fcf9f9" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="92.0" prefHeight="708.0" prefWidth="249.0">
+         <children>
+            <TabPane layoutY="1.0" prefHeight="708.0" prefWidth="320.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Команды">
+                     <content>
+                        <AnchorPane prefHeight="337.0" prefWidth="277.0">
+                           <children>
+                              <TextField layoutY="53.0" prefHeight="39.0" prefWidth="320.0" promptText="Поиск" style="-fx-background-color: #1d1d1d;" />
+                              <ScrollPane layoutY="94.0" prefHeight="583.0" prefWidth="320.0">
+                                <content>
+                                  <AnchorPane prefHeight="592.0" prefWidth="320.0">
+                                       <children>
+                                          <TitledPane animated="false" prefHeight="209.0" prefWidth="320.0" text="Продуктивность">
+                                             <content>
+                                                <AnchorPane prefHeight="225.0" prefWidth="291.0" styleClass="background">
+                                                   <children>
+                                                      <Button fx:id="AltEscButton" layoutY="1.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="ALT+ESC" />
+                                                      <Button fx:id="AltF4Button" layoutY="39.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="ALT+F4" />
+                                                      <Button fx:id="AltTabButton" layoutY="77.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="ALT+TAB" />
+                                                      <Button fx:id="CtrlShiftEscButton" layoutY="115.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="CTRL+SHIFT+ESC" />
+                                                      <Button layoutX="1.0" layoutY="152.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="131.0" text="CTRL+ESC" />
+                                                      <Label layoutX="132.0" layoutY="7.0" prefHeight="26.0" prefWidth="173.0" text="Вызов списка приложений" textFill="#070707" />
+                                                      <Label layoutX="132.0" layoutY="45.0" prefHeight="26.0" prefWidth="173.0" text="Выход из приложения" textFill="#070707" />
+                                                      <Label layoutX="132.0" layoutY="83.0" prefHeight="26.0" prefWidth="173.0" text="Переключение между приложениями" textFill="#070707" />
+                                                      <Label layoutX="132.0" layoutY="121.0" prefHeight="26.0" prefWidth="173.0" text="Открыть диспетчер устройств" textFill="#070707" />
+                                                      <Label layoutX="132.0" layoutY="160.0" prefHeight="26.0" prefWidth="173.0" text="Открыть пуск" textFill="#070707" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </TitledPane>
+                                          <TitledPane layoutY="239.0" prefHeight="343.0" prefWidth="327.0" text="Windows">
+                                             <content>
+                                                <AnchorPane prefHeight="317.0" prefWidth="325.0" styleClass="background">
+                                                   <children>
+                                                      <Button layoutY="38.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="Windows + E" />
+                                                      <Button layoutY="76.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="Windows + D" />
+                                                      <Button layoutY="114.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="Windows + A" />
+                                                      <Button layoutY="152.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="Windows + B" />
+                                                      <Button layoutX="1.0" layoutY="190.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="Windows + Space">
+                                                         <font>
+                                                            <Font size="42.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="Windows + L" />
+                                                      <Button layoutX="1.0" layoutY="228.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="Windows + I" />
+                                                      <Label layoutX="132.0" layoutY="6.0" prefHeight="26.0" prefWidth="173.0" text="Блокировака ПК" textFill="#070707" />
+                                                      <Label layoutX="132.0" layoutY="44.0" prefHeight="26.0" prefWidth="173.0" text="Открыть проводник" textFill="#070707" />
+                                                      <Label layoutX="132.0" layoutY="82.0" prefHeight="26.0" prefWidth="173.0" text="Показать/скрыть рабочий стол" textFill="#070707" />
+                                                      <Label layoutX="132.0" layoutY="120.0" prefHeight="26.0" prefWidth="173.0" text="Открыть центр действий" textFill="#070707" />
+                                                      <Label layoutX="132.0" layoutY="158.0" prefHeight="26.0" prefWidth="173.0" text="Открыть Game Bar" textFill="#070707" />
+                                                      <Label layoutX="132.0" layoutY="196.0" prefHeight="26.0" prefWidth="173.0" text="Сменить язык" textFill="#070707" />
+                                                      <Label layoutX="132.0" layoutY="234.0" prefHeight="26.0" prefWidth="173.0" text="Открыть настройку Windows" textFill="#070707" />
+                                                      <Button layoutX="1.0" layoutY="265.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="Windows + Tab" />
+                                                      <Label layoutX="132.0" layoutY="271.0" prefHeight="26.0" prefWidth="173.0" text="Переключение между столами" textFill="#070707" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </TitledPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab style="-fx-text-fill: white;" text="Клавиши">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ScrollBar layoutX="305.0" orientation="VERTICAL" prefHeight="680.0" prefWidth="12.0" />
+                              <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="1" />
+                              <Button layoutY="33.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="2" />
+                              <Button layoutY="66.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="3" />
+                              <Button layoutY="99.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="4" />
+                              <Button layoutY="132.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="5" />
+                              <Button layoutY="165.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="6" />
+                              <Button layoutY="198.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="7" />
+                              <Button layoutY="231.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="8" />
+                              <Button layoutY="264.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="9" />
+                              <Button layoutY="297.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="10" />
+                              <Button layoutY="330.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="/" />
+                              <Button layoutY="363.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="[" />
+                              <Button layoutY="396.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="]" />
+                              <Button layoutY="429.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="\\" />
+                              <Button layoutY="462.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="-" />
+                              <Button layoutY="495.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="=" />
+                              <Button layoutY="528.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="+" />
+                              <Button layoutY="561.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="#" />
+                              <Button layoutY="594.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Q" />
+                              <Button layoutY="627.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="W" />
+                              <Button layoutY="660.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="E" />
+                              <Button layoutY="693.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Button" />
+                              <Button layoutY="726.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Button" />
+                              <Button layoutY="759.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Button" />
+                              <Button layoutY="792.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Button" />
+                              <Button layoutY="825.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Button" />
+                              <Button layoutY="858.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Button" />
+                              <Button layoutY="891.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Button" />
+                              <Button layoutY="957.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Button" />
+                              <Button layoutY="990.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Button" />
+                              <Button layoutY="1023.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Button" />
+                              <Button layoutY="1056.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Button" />
+                              <Button layoutY="1089.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Button" />
+                              <Button layoutY="924.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="305.0" text="Button" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Macros">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab text="Действия">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+      <Button layoutX="1125.0" layoutY="18.0" mnemonicParsing="false" onAction="#Adminhandle" text="Администрация" />
+   </children>
+</AnchorPane>
