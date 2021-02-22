@@ -21,6 +21,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
 import javax.sound.midi.SysexMessage;
 
 public class SignUpController {
@@ -78,36 +80,54 @@ public class SignUpController {
     Connection con = null;
     PreparedStatement preparedStatement;
     ResultSet resultSet = null;
+    public boolean validateEmail(){
+        boolean isValid = false;
+        try {
+            InternetAddress internetAddress = new InternetAddress(Signup_Email.getText(), true); // strict
+            internetAddress.validate();
+            isValid = true;
+        } catch (AddressException e) {
+            System.out.println("Bad eMail address: " + Signup_Email.getText());
+
+        }
+
+        return isValid;
+    }
 
     @FXML
     private void RegisterButtonAction(ActionEvent event) throws IOException{
 
-        if (Signup_Email.getText().isEmpty() || Signup_Login.getText().isEmpty() || Signup_surname.getText().isEmpty() || Signup_surname.getText().isEmpty() || Signup_Password.getText().isEmpty() || Signup_PasswordRepeat.getText().isEmpty()) {
-        lblStatus.setTextFill(Color.RED);
-        lblStatus.setText("Enter all details");
 
-    }
-        else
-        {
-            if(Signup_PasswordRepeat.getText().toString().equals(Signup_Password.getText().toString()))
-            {
-                saveData();
-                Parent SigInParrent = FXMLLoader.load(getClass().getResource("../View/Keyboard.fxml"));
-                Scene SignInScene = new Scene(SigInParrent);
-                Stage SigInStage;
-                SigInStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-
-                SigInStage.setScene(SignInScene);
-                SigInStage.show();
-
-            }
-            else{
+        if(validateEmail() == true) {
+            if (Signup_Login.getText().isEmpty() || Signup_surname.getText().isEmpty() || Signup_surname.getText().isEmpty() || Signup_Password.getText().isEmpty() || Signup_PasswordRepeat.getText().isEmpty()) {
                 lblStatus.setTextFill(Color.RED);
-                lblStatus.setText("Wrong passwords");
-            }
+                lblStatus.setText("Enter all details");
 
+            } else {
+                if (Signup_PasswordRepeat.getText().toString().equals(Signup_Password.getText().toString())) {
+
+                    saveData();
+                    Parent SigInParrent = FXMLLoader.load(getClass().getResource("../View/Keyboard.fxml"));
+                    Scene SignInScene = new Scene(SigInParrent);
+                    Stage SigInStage;
+                    SigInStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+                    SigInStage.setScene(SignInScene);
+                    SigInStage.show();
+
+                } else {
+                    lblStatus.setTextFill(Color.RED);
+                    lblStatus.setText("Wrong passwords");
+                }
+
+            }
+        }
+        else {
+            lblStatus.setTextFill(Color.RED);
+            lblStatus.setText("Wrong email");
         }
     }
+
     private String saveData() {
 
         try {
