@@ -14,7 +14,7 @@ public class ConnectionUtil {
     {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/keyboardapp", "root", "1337.moscow");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "23121964");
             System.out.println("WORK");
             return con;
         } catch (Exception ex) {

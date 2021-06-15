@@ -87,7 +87,7 @@ public class SignUpController {
             internetAddress.validate();
             isValid = true;
         } catch (AddressException e) {
-            System.out.println("Bad eMail address: " + Signup_Email.getText());
+            System.out.println("Неправильная почта " + Signup_Email.getText());
 
         }
 
@@ -101,7 +101,7 @@ public class SignUpController {
         if(validateEmail() == true) {
             if (Signup_Login.getText().isEmpty() || Signup_surname.getText().isEmpty() || Signup_surname.getText().isEmpty() || Signup_Password.getText().isEmpty() || Signup_PasswordRepeat.getText().isEmpty()) {
                 lblStatus.setTextFill(Color.RED);
-                lblStatus.setText("Enter all details");
+                lblStatus.setText("Введите все данные");
 
             } else {
                 if (Signup_PasswordRepeat.getText().toString().equals(Signup_Password.getText().toString())) {
@@ -117,19 +117,19 @@ public class SignUpController {
 
                 } else {
                     lblStatus.setTextFill(Color.RED);
-                    lblStatus.setText("Wrong passwords");
+                    lblStatus.setText("Пароли не совпадают");
                 }
 
             }
         }
         else {
             lblStatus.setTextFill(Color.RED);
-            lblStatus.setText("Wrong email");
+            lblStatus.setText("Неверный email");
         }
     }
 
     private String saveData() {
-
+    System.out.println("savedata");
         try {
             String AddNewUserSql = "INSERT INTO users (login, name, surname, password, Email) VALUES (?,?,?,?,?)";
             preparedStatement = (PreparedStatement) con.prepareStatement(AddNewUserSql);

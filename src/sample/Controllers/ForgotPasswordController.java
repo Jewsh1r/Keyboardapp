@@ -32,6 +32,7 @@ import javafx.stage.Stage;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.swing.*;
+import javax.swing.text.Utilities;
 import javax.xml.transform.Result;
 
 public class ForgotPasswordController {
@@ -57,44 +58,55 @@ public class ForgotPasswordController {
 
     int RandomCode;
 
-
     public void ButtonResetAction(ActionEvent event) throws IOException, Exception {
 
         Random rand = new Random();
         RandomCode = rand.nextInt(999999);
         String host = "smtp.migadu.com";
         String user = "jewsh1r@1337.moscow";
-        String password = "23121964Re";
+        String password = "1337.moscow";
         String recepient = Email_field.getText();
         String subject = "Reseting Code";
         String messagerand = "Your reset code is"+RandomCode;
-
         boolean sessionDebug = false;
         Properties pros = System.getProperties();
         pros.put("mail.smtp.starttls.enable", "true");
-        pros.put("mail.smtp.host", host);
-        pros.put("mail.smtp.port", "465");
         pros.put("mail.smtp.auth", "true");
-        pros.put("mail.smtp.starttls.required", "true");
+        pros.put("mail.smtp.host", host);
+        pros.put("mail.smtp.user", user);
+        pros.put("mail.smtp.port", "465");
 
+        //pros.put("mail.smtp.starttls.required", "true");
         Authenticator auth = new Authenticator() {
-            @Override
-            public PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(user,password);
+            //override the getPasswordAuthentication method
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(user, password);
             }
         };
-    Session session = Session.getInstance(pros, auth);
-    Message msg = new MimeMessage(session);
-    msg.setFrom(new InternetAddress(user));
-    InternetAddress[] toAddresses = { new InternetAddress(recepient) };
-    msg.setRecipients(Message.RecipientType.TO, toAddresses);
-    msg.setSubject(subject);
-    msg.setSentDate(new Date());
-    msg.setText(messagerand);
+        try {
+            Session session = Session.getDefaultInstance(pros,auth);
+            MimeMessage msg = new MimeMessage(session);
+            msg.setFrom(new InternetAddress(user));
+            InternetAddress[] toAddresses = {new InternetAddress(recepient)};
+            msg.setRecipients(Message.RecipientType.TO, toAddresses);
+            msg.setSubject(subject);
+            msg.setSentDate(new Date());
+            msg.setText(messagerand);
 
-    Transport.send(msg);
-    System.out.println("Work done message away");
+            Transport transport = session.getTransport("smtp");
+            transport.connect(host, user, password);
+            transport.sendMessage(msg, msg.getAllRecipients());
+            transport.close();
+            System.out.println("Work done message away");
+        }
+        catch (Exception ex){
+            System.out.println(ex);
+
+        }
+
+
     }
+
 
 
     public void SignInButtonAction(ActionEvent event) throws IOException {
